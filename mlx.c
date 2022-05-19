@@ -104,6 +104,7 @@ int	main2(t_player *players, char *arg2)
 	render(mlx, players);
 	if (ft_strcmp(arg2, "goals") == 0)
 		mlx_string_put(mlx->mlxptr, mlx->window, WIN_WIDTH / 2, WIN_HEIGHT / 2, 0xFFFFFF, ft_goals_mlx(players));
+	mlx_string_put(mlx->mlxptr, mlx->window, 20, 20, 0xFFFFFF, "Press 'ESC' for EXIT");
 	mlx_key_hook(mlx->window, exit_with_esc, mlx);
 	mlx_loop(mlx->mlxptr);
 	return (0);
